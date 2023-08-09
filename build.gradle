@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+war {
+    archiveFileName = 'M-8.war'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'org.thymeleaf:thymeleaf:3.1.1.RELEASE'
+
+}
+
